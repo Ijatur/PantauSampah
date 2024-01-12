@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <!-- Judul -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingBottom="6dp"
+            android:text="@string/login"
+            android:textColor="@color/ijong"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingBottom="16sp"
+            android:text="@string/desc_login"
+            android:textColor="@color/textBiasa"
+            android:textSize="13sp" />
+
+        <!-- Judul End -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Email EditText -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="@font/mulish_semibold"
+                android:paddingBottom="8dp"
+                android:text="@string/email"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8sp"
+                android:background="@drawable/tvborder"
+                android:fontFamily="@font/mulish_medium"
+                android:inputType="textEmailAddress"
+                android:paddingStart="18dp"
+                android:hint="@string/email_kamu"
+                android:textColor="@color/textBiasa"
+                android:textSize="14sp"/>
+
+            <!-- Email EditText End -->
+            <!-- Password EditText -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish_semibold"
+                android:paddingBottom="8sp"
+                android:text="@string/password"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="8sp"
+                android:background="@drawable/tvborder"
+                android:fontFamily="@font/mulish_medium"
+                android:inputType="textPassword"
+                android:paddingStart="18dp"
+                android:hint="@string/password"
+                android:textColor="@color/textBiasa"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="bottom"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!-- Login Button -->
+                <Button
+                    android:id="@+id/buttonLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/btn_background"
+                    android:fontFamily="@font/raleway_semibold"
+                    android:text="@string/login"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/registerNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buat_akun"
+                    android:gravity="center_horizontal"/>
+
+
+            </LinearLayout>
+
+            <!--        <Button-->
+            <!--            android:id="@+id/loginGoogle"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_marginBottom="16dp"-->
+            <!--            android:text="Login Google" />-->
+
+
+            <!--    <com.google.android.gms.common.SignInButton-->
+            <!--        android:layout_width="wrap_content"-->
+            <!--        android:layout_height="wrap_content"-->
+            <!--        android:id="@+id/loginGoogle"/>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

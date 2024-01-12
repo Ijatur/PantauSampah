@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "980310012563",
+    "project_id": "pantausampah-43fdc",
+    "storage_bucket": "pantausampah-43fdc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980310012563:android:f562352c3c8a2687c51366",
+        "android_client_info": {
+          "package_name": "com.example.pantausampah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980310012563-evi19vhh9p0fq693s3v7cocp778v5opb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANFaoayWx8YWkWBuZdSrly1wTq7r5q2GM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980310012563-evi19vhh9p0fq693s3v7cocp778v5opb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

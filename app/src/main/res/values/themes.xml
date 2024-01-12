@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme LIGHT. -->
+    <style name="Base.Theme.PantauSampah" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/ijong</item>
+        <item name="backgroundColor">@color/white</item>
+        <item name="android:statusBarColor">@color/ijong</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.PantauSampah" parent="Base.Theme.PantauSampah" />
+</resources>

@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme DARK. -->
+    <style name="Base.Theme.PantauSampah" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <item name="colorPrimary">@color/ijong</item>
+        <item name="backgroundColor">@color/white</item>
+        <item name="android:statusBarColor">@color/ijong</item>
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>

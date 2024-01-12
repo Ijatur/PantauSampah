@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Pantau Sampah</string>
+    <string name="title_activity_login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="daftar">Daftar</string>
+    <string name="email">Email</string>
+    <string name="buat_akun">Kamu belum punya akun? <font fgcolor='#06B236'><b>Daftar</b></font></string>
+    <string name="masuk">Kamu sudah punya akun? <font fgcolor='#06B236'><b>Login</b></font></string>
+    <string name="logout">Logout</string>
+    <string name="default_web_client_id">980310012563-evi19vhh9p0fq693s3v7cocp778v5opb.apps.googleusercontent.com</string>
+    <string name="nama_kel">Nama Kepala Keluarga</string>
+    <string name="nama">Nama</string>
+    <string name="no_telepon">No Telepon</string>
+    <string name="desc_register">Selamat datang, Sebelum agen menjadi penyelamat lingkunganmu, kamu harus daftar.</string>
+    <string name="desc_login">Kami senang melihatmu lagi. Untuk menjadikan wilayahmu bersih, kamu harus login.</string>
+    <string name="email_kamu">Email Kamu</string>
+    <string name="user">User</string>
+    <string name="poin_kamu">Poin Kamu</string>
+    <string name="ayo_kumpulkan"><b>*Ayo</b> Kumpulkan poin sebanyak mungkin</string>
+    <string name="tukar_poinmu">Tukar\nPoinmu</string>
+    <string name="jadwal_sampah_kamu">Jadwal Sampah Kamu</string>
+    <string name="jadwal_sampah">Jadwal Sampah</string>
+    <string name="teks_poin">Dengan kamu membaca artikel ini, Maka kamu akan mendapatkan poin</string>
+    <string name="jenis_sampah">Jenis Sampah</string>
+    <string name="poin_kamu_saat_ini">Poin Kamu Saat Ini</string>
+    <string name="tukar_poin_kamu">Tukar Poin Kamu</string>
+</resources>

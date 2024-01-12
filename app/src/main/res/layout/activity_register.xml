@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <!-- Judul -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingBottom="6dp"
+            android:text="@string/daftar"
+            android:textColor="@color/ijong"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingBottom="16sp"
+            android:text="@string/desc_register"
+            android:textColor="@color/textBiasa"
+            android:textSize="13sp" />
+
+        <!-- Judul End -->
+        <!-- Email EditText -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_semibold"
+            android:paddingBottom="8sp"
+            android:text="@string/email"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8sp"
+            android:background="@drawable/tvborder"
+            android:fontFamily="@font/mulish_medium"
+            android:inputType="textEmailAddress"
+            android:paddingStart="18dp"
+            android:hint="@string/email_kamu"
+            android:textColor="@color/textBiasa"
+            android:textSize="14sp"
+            tools:ignore="TextFields" />
+
+        <!-- Email EditText End -->
+        <!-- Nama EditText -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_semibold"
+            android:paddingBottom="8sp"
+            android:text="@string/nama"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8sp"
+            android:background="@drawable/tvborder"
+            android:fontFamily="@font/mulish_medium"
+            android:inputType="text"
+            android:paddingStart="18dp"
+            android:hint="@string/nama_kel"
+            android:textColor="@color/textBiasa"
+            android:textSize="14sp"
+            tools:ignore="TextFields" />
+
+        <!-- Nama EditText End -->
+        <!-- Password EditText -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_semibold"
+            android:paddingBottom="8sp"
+            android:text="@string/password"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8sp"
+            android:background="@drawable/tvborder"
+            android:fontFamily="@font/mulish_medium"
+            android:inputType="textPassword"
+            android:paddingStart="18dp"
+            android:hint="@string/password"
+            android:textColor="@color/textBiasa"
+            android:textSize="14sp" />
+
+        <!-- Password EditText End -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="bottom"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Login Button -->
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/btn_background"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="@string/daftar"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/loginNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/masuk" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
