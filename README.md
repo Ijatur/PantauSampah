@@ -5,7 +5,7 @@ Dalam masyarakat saat ini, kurangnya kesadaran dan informasi mengenai pengelolaa
 
 Proyek kami bertujuan untuk mengatasi permasalahan ketidakefisienan dalam pengelolaan sampah rumah tangga dengan memberikan solusi yang terintegrasi dan mudah diakses melalui aplikasi Android. Kurangnya akses informasi yang jelas dan kurangnya sistem pengangkutan yang terkoordinasi sering kali menjadi kendala dalam upaya meningkatkan kepedulian masyarakat terhadap pengelolaan sampah. Melalui aplikasi kami, pengguna dapat dengan mudah mengakses panduan pengelolaan sampah, mengatur jadwal pengangkutan sampah, dan memilih jenis sampah yang sesuai untuk pengelolaan yang lebih efektif. Dengan demikian, kami berupaya menciptakan solusi yang tidak hanya mempermudah proses pengelolaan sampah rumah tangga tetapi juga meningkatkan kesadaran dan partisipasi masyarakat dalam menjaga kebersihan dan keberlanjutan lingkungan sekitar mereka.
 
-![WhatsApp Image 2024-01-12 at 22 30 07_08e1e4f3](https://github.com/Ijatur/PantauSampah/assets/59158006/6a5b765a-70b7-43aa-905b-521fd85e6aa4)/n
+![WhatsApp Image 2024-01-12 at 22 30 07_08e1e4f3](https://github.com/Ijatur/PantauSampah/assets/59158006/6a5b765a-70b7-43aa-905b-521fd85e6aa4)
 Halaman Login
 ![WhatsApp Image 2024-01-12 at 22 30 07_9a521626](https://github.com/Ijatur/PantauSampah/assets/59158006/ab37b002-c869-4bcc-912e-820a532e0d3e)
 Halaman Register
