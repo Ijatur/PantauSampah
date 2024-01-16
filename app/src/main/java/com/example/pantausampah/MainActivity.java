@@ -14,8 +14,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnLogout, btnTukarPoin;
-    TextView tvHalo, tvHalo2;
+    Button btnLogout;
+    TextView tvHalo, tvHalo2, btnTukarPoin;
     ImageView imgFoto;
     FirebaseAuth mAuth;
     FirebaseUser user;
