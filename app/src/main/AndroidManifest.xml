@@ -15,6 +15,9 @@
         android:theme="@style/Theme.PantauSampah"
         tools:targetApi="31">
         <activity
+            android:name=".SuccessTukarPoint"
+            android:exported="false" />
+        <activity
             android:name=".TukarMi5"
             android:exported="false" />
         <activity
