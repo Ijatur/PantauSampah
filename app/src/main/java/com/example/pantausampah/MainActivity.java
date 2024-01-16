@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity {
 
     Button btnLogout;
-    TextView tvHalo, tvHalo2, btnTukarPoin;
+    TextView tvHalo, tvHalo2, btnTukarPoin, btnRiwayat;
     ImageView imgFoto;
     FirebaseAuth mAuth;
     FirebaseUser user;
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnLogout = findViewById(R.id.logout);
         btnTukarPoin = findViewById(R.id.tukarPoin);
+        btnRiwayat = findViewById(R.id.riwayat);
         tvHalo = findViewById(R.id.tvHalo);
         tvHalo2 = findViewById(R.id.tvHalo2);
         imgFoto = findViewById(R.id.imageFoto);
@@ -49,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), TukarPoint.class);
+                startActivity(intent);
+            }
+        });
+
+        btnRiwayat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Riwayat.class);
                 startActivity(intent);
             }
         });

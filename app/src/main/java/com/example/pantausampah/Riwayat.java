@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class TukarBeras extends AppCompatActivity {
+public class Riwayat extends AppCompatActivity {
 
     ImageView btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tukar_beras);
+        setContentView(R.layout.activity_riwayat);
 
         btnBack = findViewById(R.id.btnBack);
 
@@ -24,5 +24,6 @@ public class TukarBeras extends AppCompatActivity {
                 finish();
             }
         });
+
     }
 }
