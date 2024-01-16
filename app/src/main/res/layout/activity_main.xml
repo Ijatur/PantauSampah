@@ -132,6 +132,7 @@
                             android:textSize="16sp" />
 
                         <TextView
+                            android:id="@+id/poin"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semibold"
@@ -420,6 +421,7 @@
                     android:text="@string/teks_poin"/>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/berita"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="12dp">

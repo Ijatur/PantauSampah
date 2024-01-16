@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "980310012563",
+    "firebase_url": "https://pantausampah-43fdc-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "pantausampah-43fdc",
     "storage_bucket": "pantausampah-43fdc.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "980310012563-h63jm50f63fcvpuhsp7dig7j90ppmb1q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pantausampah",
+            "certificate_hash": "85d7bc580a177d64714213956b4c547a37e5e6b4"
+          }
+        },
         {
           "client_id": "980310012563-evi19vhh9p0fq693s3v7cocp778v5opb.apps.googleusercontent.com",
           "client_type": 3
