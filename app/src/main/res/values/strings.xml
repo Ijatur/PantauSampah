@@ -34,4 +34,5 @@
     <string name="tanggal">Tanggal</string>
     <string name="poin_yang_didapat">Poin Yang Didapat</string>
     <string name="sampah_kertas">Sampah Kertas</string>
+    <string name="poin_tidak_mencukupi">Poin Tidak Mencukupi</string>
 </resources>

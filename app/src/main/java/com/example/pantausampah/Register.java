@@ -19,6 +19,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Date;
 
 public class Register extends AppCompatActivity {
 
@@ -90,6 +94,17 @@ public class Register extends AppCompatActivity {
                                             .setDisplayName(nama).build();
                                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                                     user.updateProfile(profileUpdate);
+
+                                    String id = user.getUid();
+                                    String nama = editTextNama.getText().toString();
+                                    String poin = "0";
+
+                                    DataClass dataClass = new DataClass(id,poin,nama);
+
+                                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                    final DatabaseReference reference = database.getReference("User detail");
+
+                                    reference.child(id).setValue(dataClass);
 
                                     Intent intent = new Intent(getApplicationContext(), Login.class);
                                     startActivity(intent);

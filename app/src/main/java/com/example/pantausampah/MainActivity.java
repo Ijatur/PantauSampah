@@ -18,11 +18,15 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Map;
 
 import static java.lang.String.valueOf;
 
@@ -31,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference mDatabase;
 
     int poin;
+    String nama;
 
     Button btnLogout;
     TextView tvHalo, tvHalo2, btnTukarPoin, btnRiwayat, tvPoin;
@@ -44,9 +49,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference().child("User detail").child(user.getUid());
 
         btnLogout = findViewById(R.id.logout);
         btnTukarPoin = findViewById(R.id.tukarPoin);
@@ -57,34 +66,60 @@ public class MainActivity extends AppCompatActivity {
         imgFoto = findViewById(R.id.imageFoto);
         cvBerita = findViewById(R.id.berita);
 
-        user = mAuth.getCurrentUser();
 
         if (user == null){
             Intent intent = new Intent(getApplicationContext(), Login.class);
             startActivity(intent);
             finish();
         } else {
-            tvHalo.setText(user.getEmail());
-            tvHalo2.setText(user.getDisplayName());
-            imgFoto.setImageURI(user.getPhotoUrl());
-            mDatabase.child("User detail").child(user.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+
+            reference.addValueEventListener(new ValueEventListener() {
                 @Override
-                public void onComplete(@NonNull Task<DataSnapshot> task) {
-                    if (!task.isSuccessful()){
-                        Toast.makeText(getApplicationContext(),"asdasasssssd", Toast.LENGTH_SHORT).show();
-                    } else {
-                        try {
-                            JSONObject obj = new JSONObject(valueOf(task.getResult().getValue()));
-                            String  data = obj.getString("poin");
-                            poin = Integer.parseInt(data);
-                            tvPoin.setText(Integer.toString(poin));
-                        } catch (JSONException e) {
-                            throw new RuntimeException(e);
-                        }
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    try {
+                        JSONObject obj = new JSONObject((Map) snapshot.getValue());
+                        String dbPoin = obj.getString("poin");
+                        String dbNama = obj.getString("nama");
+                        poin = Integer.parseInt(dbPoin);
+                        nama = dbNama;
+                        tvHalo2.setText(nama);
+                        tvPoin.setText(String.valueOf(poin));
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
                     }
                 }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
             });
+
+            tvHalo.setText(user.getEmail());
+//            tvHalo2.setText(user.getEmail());
+            imgFoto.setImageURI(user.getPhotoUrl());
         }
+
+        reference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+//                    JSONObject obj = new JSONObject((Map) snapshot.getValue());
+//                    try {
+//                        String dbPoin = obj.getString("poin");
+//                        poin = Integer.parseInt(dbPoin);
+//                        tvPoin.setText(dbPoin);
+//                    } catch (JSONException e) {
+////                        throw new RuntimeException(e);
+//                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
 
         cvBerita.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,9 +158,12 @@ public class MainActivity extends AppCompatActivity {
     public void bacaBerita(){
 
         String id = user.getUid();
-        String poin = "130";
+        int tambahpoin = 125;
+        String nama = user.getDisplayName();
 
-        DataClass dataClass = new DataClass(id, poin);
+        String poinBaru = Integer.toString(poin + tambahpoin);
+
+        DataClass dataClass = new DataClass(id, poinBaru, nama);
 
         FirebaseDatabase.getInstance().getReference("User detail").child(id)
                 .setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
