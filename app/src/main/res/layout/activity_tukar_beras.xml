@@ -56,7 +56,7 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="#E4CD00"
                 android:textSize="24sp"
-                android:text="999 Poin"/>
+                android:text="9999 Poin"/>
 
             <TextView
                 android:layout_width="match_parent"

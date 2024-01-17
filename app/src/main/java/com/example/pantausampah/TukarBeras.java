@@ -34,9 +34,6 @@ public class TukarBeras extends AppCompatActivity {
     FirebaseUser user;
     FirebaseAuth mAuth;
 
-    public TukarBeras() {
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,7 +99,8 @@ public class TukarBeras extends AppCompatActivity {
             tvSisaPoin.setText(R.string.poin_tidak_mencukupi);
         } else {
             int poinBaru = poinSaya - 9999;
-            tvSisaPoin.setText(String.valueOf(poinBaru));
+            String sisaPoin = "Sisa Poin " + String.valueOf(poinBaru);
+            tvSisaPoin.setText(sisaPoin);
         }
     }
 }
